@@ -1,0 +1,28 @@
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+.loading-circle {
+    
+    animation: spin 1s linear infinite;
+    animation-delay: 1.5s;
+}
+.react-circle {
+    
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
