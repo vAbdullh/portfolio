@@ -38,7 +38,7 @@ export default function Tags() {
 }
 function Tag({ children }) {
     return (
-        <div className="w-fit flex gap-2 justify-center items-center border py-1 px-2 rounded-full border-light-black bg-black2 capitalize text-xs">
+        <div className="w-fit flex gap-2 justify-center items-center border py-1 px-2 rounded-full border-light-black bg-black capitalize text-xs">
             {children}
         </div>
     )

@@ -7,7 +7,7 @@ Welcome to my personal portfolio!
 - React JS
 - Tailwind CSS
 
-It will be available [here](https://abdullh.live) after upload it in the server.
+[visit it](https://abdullh.live)
 
 ### Progress
 

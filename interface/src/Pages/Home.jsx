@@ -15,6 +15,7 @@ import { ImDatabase } from "react-icons/im";
 import { LiaCodeSolid, LiaGlobeAmericasSolid, LiaLaptopCodeSolid } from "react-icons/lia";
 import { TbNetwork } from "react-icons/tb";
 import { WiStars } from "react-icons/wi";
+import { IoSettingsOutline } from "react-icons/io5";
 
 export default function Home() {
     return (
@@ -31,8 +32,19 @@ export default function Home() {
                 <Skills />
                 <Learning />
                 <Contact />
-                <Container className="col-span-2 sm:col-span-3 order-2 relative grid place-items-center text-center">
-                    <p>This space is waiting for something awesome. Check back later!</p>
+                <Container divider={true} className="col-span-2 sm:col-span-3 order-2 relative grd place-items-center">
+
+                    <div className="absolute top-0 left-0 p-1 w-full text-center capitalize">
+                        <span className="flex gap-1 justify-center items-center text-xs  text-gray-400"><IoSettingsOutline size={16} className="text-primary animate-spin" />Working on</span>
+                        <p className="text-sm"> i'm Work on</p>
+                    </div>
+                    <div className="mt-11 w-full flex flex-col gap-3">
+                        <p className="text-xl">Web department leader for Baseratk</p>
+                        <p className="font-thin text-white/50">Sstartup, managed by KAU students, providing for law students training opportunities and simulated court experiences.</p>
+                        <a href="https://x.com/baseratk_sa" className="text-primary flex gap-2 justify-center items-center">
+                            <BsTwitterX className="text-primary" /> more info
+                        </a>
+                    </div>
                 </Container>
 
             </div >
