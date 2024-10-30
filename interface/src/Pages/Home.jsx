@@ -25,7 +25,7 @@ export default function Home() {
                 <span className="font-pixel px-1 text-3xl  text-white">Abdullah </span>
                 &#47;&gt;
             </p>
-            <div className="grid justify-center items-center grid-cols-home-sm sm:grid-cols-home-md lg:grid-cols-home-lg auto-rows-home lg:auto-rows-home-lg gap-2.5 md:gap-4 py-5 md:py-10  text-mint-white">
+            <div className="grid justify-center items-center grid-cols-home-sm sm:grid-cols-home-md lg:grid-cols-home-lg auto-rows-home lg:auto-rows-home-lg gap-2.5 md:gap-4 py-5 md:pb-10 md:pt-2  text-mint-white">
                 <Header />
                 <Profile />
                 <Projects />
@@ -38,9 +38,9 @@ export default function Home() {
                         <span className="flex gap-1 justify-center items-center text-xs  text-gray-400"><IoSettingsOutline size={16} className="text-primary animate-spin" />Working on</span>
                         <p className="text-sm"> i'm Work on</p>
                     </div>
-                    <div className="mt-11 w-full flex flex-col gap-3">
-                        <p className="text-xl">Web department leader for Baseratk</p>
-                        <p className="font-thin text-white/50">Sstartup, managed by KAU students, providing for law students training opportunities and simulated court experiences.</p>
+                    <div className="mt-11 w-full flex flex-col lg:gap-3">
+                        <p className="text-[10px] lg:text-xl">Web department leader for Baseratk</p>
+                        <p className="font-thin text-white/50 text-[10px] lg:text-base">Sstartup, managed by KAU students, providing for law students training opportunities and simulated court experiences.</p>
                         <a href="https://x.com/baseratk_sa" className="text-primary flex gap-2 justify-center items-center">
                             <BsTwitterX className="text-primary" /> more info
                         </a>
