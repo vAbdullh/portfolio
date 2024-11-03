@@ -11,9 +11,10 @@ import { FaTools } from "react-icons/fa";
 import { GrTechnology } from "react-icons/gr";
 import { GiProgression } from "react-icons/gi";
 import { GoProjectRoadmap } from "react-icons/go";
-import { ImDatabase } from "react-icons/im";
+// import { ImDatabase } from "react-icons/im";
+import { GrInsecure } from "react-icons/gr";
 import { LiaCodeSolid, LiaGlobeAmericasSolid, LiaLaptopCodeSolid } from "react-icons/lia";
-import { TbNetwork } from "react-icons/tb";
+import { TbBrandReact } from "react-icons/tb";
 import { WiStars } from "react-icons/wi";
 import { IoSettingsOutline } from "react-icons/io5";
 
@@ -254,21 +255,15 @@ const Learning = () => {
                 </li>
                 <li className="flex-grow flex items-center gap-3 border mt-2 border-light-black bg-black2 p-1 md:p-2 rounded-10">
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
-                        <ImDatabase className="h-full w-full text-primary" />
+                        <GrInsecure className="h-full w-full text-primary" />
                     </div>
-                    <span>mongodb</span>
+                    <span>CYS</span>
                 </li>
                 <li className="flex-grow flex items-center gap-3 border mt-2 border-light-black bg-black2 p-1 md:p-2 rounded-10">
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
-                        <ImDatabase className="h-full w-full text-primary" />
+                        <TbBrandReact className="h-full w-full text-primary" />
                     </div>
-                    <span>mySQL</span>
-                </li>
-                <li className="flex-grow flex items-center gap-3 border mt-2 border-light-black bg-black2 p-1 md:p-2 rounded-10">
-                    <div className="bg-black1 p-2 rounded-md border border-light-black ">
-                        <TbNetwork className="h-full w-full text-primary" />
-                    </div>
-                    <span>networking</span>
+                    <span>react query</span>
                 </li>
             </ul>
         </Container>
