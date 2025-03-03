@@ -108,7 +108,7 @@ const Profile = () => {
                 </div>
                 <Tags />
                 <div className="z-10 w-full grid grid-cols-2 lg:grid-cols-1 gap-2">
-                    <a href="mailto:abdullah.mansour2@icloud.com" target="_blank" rel="noopener noreferrer" >
+                    <a href="mailto:contact@abdullh.tech" target="_blank" rel="noopener noreferrer" >
                         <button className="bg-primary flex justify-center items-center gap-1 text-sm w-full rounded-10 h-10 lg:h-12">
                             <BiSolidMessageSquareDetail />
                             Message me
@@ -277,7 +277,7 @@ const Contact = () =>
     <h2>let's work together</h2>
     <p className="text-gray-400 text-xs lg:text-base">let's transform your ideas into reality</p>
     <div className="w-full flex flex-col gap-2">
-        <a href="mailto:abdullah.mansour2@icloud.com" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:contact@abdullh.tech" target="_blank" rel="noopener noreferrer">
             <button className="bg-light-black border border-black1 flex justify-center items-center gap-1 text-sm w-full rounded-10 h-12">
                 <BiSolidMessageSquareDetail />
                 Contact me
