@@ -23,16 +23,16 @@ import { PiCodeDuotone } from "react-icons/pi";
 export default function Home() {
     const slides = [
         {
-            title: "Web department leader for Baseratk",
+            title: "Technical Member in AI Club",
             description:
-                "Startup, managed by KAU students, providing for law students training opportunities and simulated court experiences.",
-            link: "https://x.com/baseratk_sa",
+                "A club at KAU under FCIT",
+            link: "https://x.com/fcit_aiclub",
         },
         {
-            title: "Tech department leader for Programming Club",
+            title: "Technical Member and Website Development leader with Protothon",
             description:
-                "A club at KAU under FCIT, Our goal to teach an learn programming skills",
-            link: "https://x.com/ProggClub_KAU",
+                "Prototyping hackathon",
+            link: "https://x.com/Protothon_sa",
         },
     ];
     const [current, setCurrent] = useState(0);
@@ -72,23 +72,23 @@ export default function Home() {
                     </div>
 
                     {/* Slider content */}
-                    <div className="mt-11 w-full flex flex-col text-center transition-all duration-500">
+                    <div className="my-11 w-full flex flex-col text-center transition-all duration-500 pb-5">
                         <p className="text-[10px] lg:text-xl">{slides[current].title}</p>
-                        <p className="font-thin text-white/50 text-[10px] lg:text-base mt-1">
+                        <p className="font-thin text-white/50 text-[10px] lg:text-base">
                             {slides[current].description}
                         </p>
                         <a
                             href={slides[current].link}
-                            className="text-primary flex gap-2 justify-center items-center mt-1"
+                            className="text-primary flex gap-2 justify-center items-center mt-1 text-xs"
                         >
                             <BsTwitterX className="text-primary" /> more info
                         </a>
                     </div>
 
-                    <div className="flex items-center flex-row gap-4 absolute bottom-1 mx-auto left-1/2 -translate-x-1/2">
+                    <div className="flex items-center flex-row gap-4 absolute bottom-0 mx-auto left-1/2 -translate-x-1/2">
                         <button
                             onClick={prev}
-                            className="bg-white/10 hover:bg-white/20 p-2 rounded-full"
+                            className="bg-white/10 hover:bg-white/20 p-1 rounded-full"
                         >
                             <BiChevronLeft size={20} />
                         </button>
@@ -104,7 +104,7 @@ export default function Home() {
                         </div>
                         <button
                             onClick={next}
-                            className="bg-white/10 hover:bg-white/20 p-2 rounded-full"
+                            className="bg-white/10 hover:bg-white/20 p-1 rounded-full"
                         >
                             <BiChevronRight size={20} />
                         </button>
