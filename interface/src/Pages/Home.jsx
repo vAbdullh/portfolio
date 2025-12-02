@@ -18,6 +18,7 @@ import { TbBrandReact } from "react-icons/tb";
 import { WiStars } from "react-icons/wi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { FaServer } from "react-icons/fa6";
+import { PiCodeDuotone } from "react-icons/pi";
 
 export default function Home() {
     const slides = [
@@ -47,7 +48,7 @@ export default function Home() {
     const next = () => setCurrent((prev) => (prev + 1) % slides.length);
     return (
         <div className="min-h-screen flex flex-col justify-between">
-            <p className="text-2xl pt-5 text-center text-primary md:hidden">
+            <p className="text-2xl pt-5 text-center text-primary">
                 &lt;
                 <span className="font-pixel px-1 text-3xl  text-white">Abdullah </span>
                 &#47;&gt;
@@ -198,29 +199,19 @@ const Projects = () => {
             [
                 {
                     "id": 1,
-                    "name": "RoboCup Website",
-                    "link": "https://robo-cup-ecec.web.app/",
-                    "repo": "https://github.com/vAbdullh/roboCup"
+                    "name": "Protothon",
+                    "link": "https://protothon.info/",
                 },
                 {
                     "id": 2,
-                    "name": "Baseratk website",
-                    "link": "http://baseratk.com",
-                    // "repo": "https://github.com/vAbdullh/Express-MongoDB-User-Authentication-System"
+                    "name": "RoboCup Website",
+                    "link": "https://robo-cup-ecec.web.app/",
                 },
                 {
                     "id": 3,
-                    "name": "Time tracking dashboard",
-                    "link": "https://vabdullh.github.io/time-tracking-dashboar/dist/",
-                    "repo": "https://github.com/vAbdullh/time-tracking-dashboar"
+                    "name": "Baseratk website",
+                    "link": "http://baseratk.com",
                 },
-                {
-                    "id": 4,
-                    "name": "IP address tracker",
-                    "link": "https://vabdullh.github.io/project1-ip-track/",
-                    "repo": "https://github.com/vAbdullh/project1-ip-track"
-
-                }
             ]
 
         )
@@ -282,7 +273,7 @@ const ProjectBox = ({ name, link, repo }) => {
 }
 
 const Skills = () => {
-    const skills = ["react", "tailwindCSS", "firebase", "nodeJS", "git"]
+    const skills = ["react", "tailwindCSS", "firebase", "expressJS", "git"]
 
     return <Container className='row-span-2' divider={true}>
         <div className="absolute top-0 left-0 p-1 w-full text-center capitalize">
@@ -313,9 +304,9 @@ const Learning = () => {
             <ul className="flex flex-col justify-end h-full mt-1 pt-11 capitalize text-[10px] lg:text-base">
                 <li className="flex-grow flex items-center gap-3 border  border-light-black bg-black2 p-1 md:p-2 rounded-10">
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
-                        <LiaCodeSolid className="h-full w-full text-primary" />
+                        <PiCodeDuotone className="h-full w-full text-primary" />
                     </div>
-                    <span>expressJS</span>
+                    <span>NextJS</span>
                 </li>
                 <li className="flex-grow flex items-center gap-3 border mt-2 border-light-black bg-black2 p-1 md:p-2 rounded-10">
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
@@ -327,7 +318,13 @@ const Learning = () => {
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
                         <FaServer className="h-full w-full text-primary" />
                     </div>
-                    <span>Cloud </span>
+                    <span>Cloud</span>
+                </li>
+                <li className="flex-grow flex items-center gap-3 border  border-light-black bg-black2 p-1 md:p-2 rounded-10">
+                    <div className="bg-black1 p-2 rounded-md border border-light-black ">
+                        <PiCodeDuotone className="h-full w-full text-primary" />
+                    </div>
+                    <span>Backend</span>
                 </li>
             </ul>
         </Container>

@@ -27,11 +27,7 @@ export default function Tags() {
             </Tag>
             <Tag>
                 <FaCode className='text-primary' />
-                Front-end
-            </Tag>
-            <Tag>
-                <GrArchlinux className='text-primary' />
-                Arch linux
+                Full Stack Developer
             </Tag>
         </div>
     )
