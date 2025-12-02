@@ -4,8 +4,8 @@ import Container from "../Components/Container";
 import Footer from "../Components/Footer";
 import Tags from "../Components/Tags";
 
-import { AiFillTool, AiOutlineLoading3Quarters } from "react-icons/ai";
-import { BiSolidMessageSquareDetail } from "react-icons/bi";
+import { AiFillTool, AiOutlineDocker, AiOutlineLoading3Quarters } from "react-icons/ai";
+import { BiChevronLeft, BiChevronRight, BiSolidMessageSquareDetail } from "react-icons/bi";
 import { BsFillFileEarmarkCodeFill, BsTwitterX } from "react-icons/bs";
 import { FaTools } from "react-icons/fa";
 import { GrTechnology } from "react-icons/gr";
@@ -17,8 +17,34 @@ import { LiaCodeSolid, LiaGlobeAmericasSolid, LiaLaptopCodeSolid } from "react-i
 import { TbBrandReact } from "react-icons/tb";
 import { WiStars } from "react-icons/wi";
 import { IoSettingsOutline } from "react-icons/io5";
+import { FaServer } from "react-icons/fa6";
 
 export default function Home() {
+    const slides = [
+        {
+            title: "Web department leader for Baseratk",
+            description:
+                "Startup, managed by KAU students, providing for law students training opportunities and simulated court experiences.",
+            link: "https://x.com/baseratk_sa",
+        },
+        {
+            title: "Tech department leader for Programming Club",
+            description:
+                "A club at KAU under FCIT, Our goal to teach an learn programming skills",
+            link: "https://x.com/ProggClub_KAU",
+        },
+    ];
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % slides.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
+    const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+    const next = () => setCurrent((prev) => (prev + 1) % slides.length);
     return (
         <div className="min-h-screen flex flex-col justify-between">
             <p className="text-2xl pt-5 text-center text-primary md:hidden">
@@ -33,18 +59,54 @@ export default function Home() {
                 <Skills />
                 <Learning />
                 <Contact />
-                <Container divider={true} className="col-span-2 sm:col-span-3 order-2 relative grd place-items-center">
 
+                <Container divider={true} className="col-span-2 sm:col-span-3 order-2 relative grd place-items-center">
+                    {/* Header */}
                     <div className="absolute top-0 left-0 p-1 w-full text-center capitalize">
-                        <span className="flex gap-1 justify-center items-center text-xs  text-gray-400"><IoSettingsOutline size={16} className="text-primary animate-spin" />Working on</span>
-                        <p className="text-sm"> i'm Work on</p>
+                        <span className="flex gap-1 justify-center items-center text-xs text-gray-400">
+                            <IoSettingsOutline size={16} className="text-primary animate-spin" />
+                            Working on
+                        </span>
+                        <p className="text-sm">I'm working on</p>
                     </div>
-                    <div className="mt-11 w-full flex flex-col lg:gap-3">
-                        <p className="text-[10px] lg:text-xl">Web department leader for Baseratk</p>
-                        <p className="font-thin text-white/50 text-[10px] lg:text-base">Sstartup, managed by KAU students, providing for law students training opportunities and simulated court experiences.</p>
-                        <a href="https://x.com/baseratk_sa" className="text-primary flex gap-2 justify-center items-center">
+
+                    {/* Slider content */}
+                    <div className="mt-11 w-full flex flex-col text-center transition-all duration-500">
+                        <p className="text-[10px] lg:text-xl">{slides[current].title}</p>
+                        <p className="font-thin text-white/50 text-[10px] lg:text-base mt-1">
+                            {slides[current].description}
+                        </p>
+                        <a
+                            href={slides[current].link}
+                            className="text-primary flex gap-2 justify-center items-center mt-1"
+                        >
                             <BsTwitterX className="text-primary" /> more info
                         </a>
+                    </div>
+
+                    <div className="flex items-center flex-row gap-4 absolute bottom-1 mx-auto left-1/2 -translate-x-1/2">
+                        <button
+                            onClick={prev}
+                            className="bg-white/10 hover:bg-white/20 p-2 rounded-full"
+                        >
+                            <BiChevronLeft size={20} />
+                        </button>
+                        <div className="flex justify-center gap-2">
+                            {slides.map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setCurrent(i)}
+                                    className={`w-2 h-2 rounded-full transition-all duration-300 ${current === i ? "bg-primary" : "bg-white/30"
+                                        }`}
+                                />
+                            ))}
+                        </div>
+                        <button
+                            onClick={next}
+                            className="bg-white/10 hover:bg-white/20 p-2 rounded-full"
+                        >
+                            <BiChevronRight size={20} />
+                        </button>
                     </div>
                 </Container>
 
@@ -136,15 +198,15 @@ const Projects = () => {
             [
                 {
                     "id": 1,
-                    "name": "Express-MongoDB User Authentication System",
-                    "link": "http://auth2.abdullh.tech/",
-                    "repo": "https://github.com/vAbdullh/Express-MongoDB-User-Authentication-System"
+                    "name": "RoboCup Website",
+                    "link": "https://robo-cup-ecec.web.app/",
+                    "repo": "https://github.com/vAbdullh/roboCup"
                 },
                 {
                     "id": 2,
-                    "name": "Age calculator app",
-                    "link": "https://vabdullh.github.io/Age-calculator-react/dist/",
-                    "repo": "https://github.com/vAbdullh/Age-calculator-react"
+                    "name": "Baseratk website",
+                    "link": "http://baseratk.com",
+                    // "repo": "https://github.com/vAbdullh/Express-MongoDB-User-Authentication-System"
                 },
                 {
                     "id": 3,
@@ -202,12 +264,14 @@ const ProjectBox = ({ name, link, repo }) => {
                 <span className="max-w-36">{name}</span>
             </div>
             <div className='flex gap-3 min-w-20'>
-                <div className='flex gap-3'>
+                <div className='flex gap-3 justify-end items-end flex-1'>
+                    {repo &&
+                        <a href={repo} className="bg-black1 p-2 rounded-md border border-light-black flex items-center justify-center" target="_blank" rel="noopener noreferrer" title="repo">
+                            <BsFillFileEarmarkCodeFill className='text-primary h-full w-full' />
+                        </a>
+                    }
                     <a href={link} className="bg-black1 p-2 rounded-md border border-light-black flex items-center justify-center">
                         <LiaGlobeAmericasSolid className='text-primary h-full w-full' />
-                    </a>
-                    <a href={repo} className="bg-black1 p-2 rounded-md border border-light-black flex items-center justify-center">
-                        <BsFillFileEarmarkCodeFill className='text-primary h-full w-full' />
                     </a>
                 </div>
 
@@ -218,7 +282,7 @@ const ProjectBox = ({ name, link, repo }) => {
 }
 
 const Skills = () => {
-    const skills = ["react", "tailwindCSS", "linux", "nodeJS", "git"]
+    const skills = ["react", "tailwindCSS", "firebase", "nodeJS", "git"]
 
     return <Container className='row-span-2' divider={true}>
         <div className="absolute top-0 left-0 p-1 w-full text-center capitalize">
@@ -251,19 +315,19 @@ const Learning = () => {
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
                         <LiaCodeSolid className="h-full w-full text-primary" />
                     </div>
-                    <span>express</span>
+                    <span>expressJS</span>
                 </li>
                 <li className="flex-grow flex items-center gap-3 border mt-2 border-light-black bg-black2 p-1 md:p-2 rounded-10">
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
-                        <GrInsecure className="h-full w-full text-primary" />
+                        <AiOutlineDocker className="h-full w-full text-primary" />
                     </div>
-                    <span>CYS</span>
+                    <span>Docker</span>
                 </li>
                 <li className="flex-grow flex items-center gap-3 border mt-2 border-light-black bg-black2 p-1 md:p-2 rounded-10">
                     <div className="bg-black1 p-2 rounded-md border border-light-black ">
-                        <TbBrandReact className="h-full w-full text-primary" />
+                        <FaServer className="h-full w-full text-primary" />
                     </div>
-                    <span>react query</span>
+                    <span>Cloud </span>
                 </li>
             </ul>
         </Container>

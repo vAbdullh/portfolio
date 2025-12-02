@@ -32,3 +32,6 @@ jspm_packages/
 # Ignore temporary files
 *.tmp
 *.swp
+
+# Firebase cashe
+.firebase/
