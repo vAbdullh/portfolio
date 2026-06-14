@@ -148,7 +148,7 @@ export default function PortfolioGrid() {
             <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent flex-grow"></div>
           </div>
           <div className="w-full grid grid-cols-2 xl:grid-cols-1 gap-2">
-            <a href="mailto:contact@abdullh.tech" target="_blank" rel="noopener noreferrer" className="w-full">
+            <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#111;&#110;&#116;&#97;&#99;&#116;&#64;&#97;&#98;&#100;&#117;&#108;&#108;&#104;&#46;&#116;&#101;&#99;&#104;" target="_blank" rel="noopener noreferrer" className="w-full">
               <Button className="w-full h-10 lg:h-12 gap-1.5 bg-primary text-white hover:bg-primary/85 rounded-10 transition-all duration-300">
                 <BiSolidMessageSquareDetail />
                 Message me
