@@ -83,7 +83,7 @@ export default function PortfolioGrid() {
     }
   ];
   return (
-    <div className="grid justify-center items-center grid-cols-home-sm sm:grid-cols-home-md lg:grid-cols-home-lg auto-rows-home lg:auto-rows-home-lg gap-2.5 md:gap-4 py-5 md:pb-10 md:pt-2 text-mint-white">
+    <div className="grid justify-center items-center grid-cols-home-sm sm:grid-cols-home-md xl:grid-cols-home-lg auto-rows-home xl:auto-rows-home-lg gap-2.5 md:gap-4 py-5 md:pb-10 md:pt-2 text-mint-white">
 
       {/* Major — sm:order-1  lg:order-1 */}
       <Container className="order-1 lg:order-1 entry-card-2">
@@ -147,7 +147,7 @@ export default function PortfolioGrid() {
             </span>
             <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent flex-grow"></div>
           </div>
-          <div className="w-full grid grid-cols-2 lg:grid-cols-1 gap-2">
+          <div className="w-full grid grid-cols-2 xl:grid-cols-1 gap-2">
             <a href="mailto:contact@abdullh.tech" target="_blank" rel="noopener noreferrer" className="w-full">
               <Button className="w-full h-10 lg:h-12 gap-1.5 bg-primary text-white hover:bg-primary/85 rounded-10 transition-all duration-300">
                 <BiSolidMessageSquareDetail />
