@@ -1,16 +1,19 @@
-# Portfolio
+# Abdullah's Portfolio
 
-Welcome to my personal portfolio!
+[![Live Site](https://img.shields.io/badge/Live-abdullh.tech-blue?style=for-the-badge&logo=vercel)](https://abdullh.tech)
 
-### Technologies Used
+## Welcome to my personal portfolio!
 
-- React JS
-- Tailwind CSS
+[![Portfolio Preview](./preview.png)](https://abdullh.tech)
 
-[visit it](https://abdullh.live)
 
-### Progress
+## Tech Stack
 
-- Interface: done ✅
-- Backend: in progress 🔧
-- Dashboard: in progress 🔧
+- **Framework:** [Next.js](https://nextjs.org/) (React 19)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components:** [Shadcn UI](https://ui.shadcn.com/)
+
+---
+
+
+
